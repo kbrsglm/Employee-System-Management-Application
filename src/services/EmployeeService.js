@@ -1,0 +1,11 @@
+import axios from "axios";
+const REST_API_BASE_URL="http://localhost:8080/api/employees";
+export const listEmployee= () => axios.get(REST_API_BASE_URL);
+const REST_API_BASE_CREATE_URL="http://localhost:8080/api/create";
+export const cerateEmployee = (employee) => axios.post(REST_API_BASE_CREATE_URL, employee);
+const REST_API_BASE_GET_URL="http://localhost:8080/api/get";
+export const getEmployee=(employeeId) => axios.get(REST_API_BASE_GET_URL +'/' + employeeId);
+const REST_API_BASE_UPDATE_URL="http://localhost:8080/api/update";
+export const updateEmployee=(employeeId,employee)=> axios.put(REST_API_BASE_UPDATE_URL + '/' + employeeId,employee);
+const REST_API_BASE_DELETE_URL="http://localhost:8080/api/delete";
+export const deleteEmployee=(employeeId)=> axios.delete(REST_API_BASE_DELETE_URL + '/' + employeeId);
